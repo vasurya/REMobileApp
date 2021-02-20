@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 // import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 // import {Button} from 'native-base'
 import { Header, Icon, Image, Button, Overlay } from "react-native-elements";
 import AppLoading from "expo-app-loading";
@@ -64,91 +70,524 @@ export default function Product({ navigation }) {
     );
 
     let SoftwarePage = (
-      <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-        <TouchableOpacity
-          onPress={() => {
-            setoverlay1(true);
-          }}
-        >
-          <View
-            style={{
-              borderRadius: 10,
-              border: "1px solid #ccc",
-              boxShadow: "0 0 10px #ccc",
-              backgroundColor: "#fff",
-              width: 160,
-              height: 150,
-              justifyContent: "center",
-              alignItems: "center",
+      <View>
+        <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+          <TouchableOpacity
+            onPress={() => {
+              setoverlay1(true);
             }}
           >
-            <Image
-              source={require("../assets/laptopicon.png")}
-              style={{ width: 90, height: 60 }}
-              // onPress = {()=>{setoverlay(true)}}
-            ></Image>
-            <Text
+            <View
               style={{
-                fontFamily: "Raleway_400Regular",
-                fontSize: 15,
-                marginTop: "10%",
+                borderRadius: 10,
+                border: "1px solid #ccc",
+                boxShadow: "0 0 10px #ccc",
+                backgroundColor: "#fff",
+                width: 160,
+                height: 150,
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              Web Development
-            </Text>
-            <Overlay
-              isVisible={overlay1}
-              onBackdropPress={() => setoverlay1(false)}
-              overlayStyle={{ width: "80%", height: "40%" }}
+              <Image
+                source={require("../assets/laptopicon.png")}
+                style={{ width: 90, height: 90 }}
+                // onPress = {()=>{setoverlay(true)}}
+              ></Image>
+              <Text
+                style={{
+                  fontFamily: "Raleway_400Regular",
+                  fontSize: 15,
+                  marginTop: "10%",
+                }}
+              >
+                Web Development
+              </Text>
+              <Overlay
+                isVisible={overlay1}
+                onBackdropPress={() => setoverlay1(false)}
+                overlayStyle={{ width: "80%", height: "40%" }}
+              >
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Image
+                    source={require("../assets/laptopicon.png")}
+                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    // onPress = {()=>{setoverlay(true)}}
+                  ></Image>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 20,
+                      marginTop: "10%",
+                    }}
+                  >
+                    Web Development
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 14,
+                      padding: "5%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Retail Experts offers a comprehensive e-commerce website
+                    application and mobile application that is fully
+                    customizable and personalized based on the customer's needs
+                  </Text>
+                </View>
+              </Overlay>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              setoverlay2(true);
+            }}
+          >
+            <View
+              style={{
+                borderRadius: 10,
+                border: "1px solid #ccc",
+                boxShadow: "0 0 10px #ccc",
+                backgroundColor: "#fff",
+                width: 160,
+                height: 150,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              <View style={{ justifyContent: "center", alignItems: "center" }}>
-                <Image
-                  source={require("../assets/laptopicon.png")}
-                  style={{ width: 90, height: 60 }}
-                  // onPress = {()=>{setoverlay(true)}}
-                ></Image>
-                <Text
-                  style={{
-                    fontFamily: "Raleway_400Regular",
-                    fontSize: 20,
-                    marginTop: "10%",
-                  }}
+              <Image
+                source={require("../assets/storeicon.png")}
+                style={{ width: 90, height: 90 }}
+                // onPress = {()=>{setoverlay(true)}}
+              ></Image>
+              <Text
+                style={{
+                  fontFamily: "Raleway_400Regular",
+                  fontSize: 15,
+                  marginTop: "10%",
+                }}
+              >
+                Store Management
+              </Text>
+              <Overlay
+                isVisible={overlay2}
+                onBackdropPress={() => setoverlay2(false)}
+                overlayStyle={{ width: "80%", height: "40%" }}
+              >
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
                 >
-                  Web Development
-                </Text>
-                <Text
-                  style={{
-                    fontFamily: "Raleway_400Regular",
-                    fontSize: 14,
-                    padding: "5%",
-                    textAlign:"center"
-                  }}
-                >
-                  Retail Experts offers a comprehensive e-commerce website
-                  application and mobile application that is fully customizable
-                  and personalized based on the customer's needs
-                </Text>
-              </View>
-            </Overlay>
-          </View>
-        </TouchableOpacity>
+                  <Image
+                    source={require("../assets/storeicon.png")}
+                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    // onPress = {()=>{setoverlay(true)}}
+                  ></Image>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 20,
+                      marginTop: "10%",
+                    }}
+                  >
+                    Store Management
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 14,
+                      padding: "5%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Retail Experts offers a comprehensive e-commerce website
+                    application and mobile application that is fully
+                    customizable and personalized based on the customer's needs
+                  </Text>
+                </View>
+              </Overlay>
+            </View>
+          </TouchableOpacity>
+        </View>
         <View
           style={{
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            boxShadow: "0 0 10px #ccc",
-            backgroundColor: "#fff",
-            width: 160,
-            height: 150,
+            flexDirection: "row",
+            justifyContent: "space-around",
+            marginTop: "5%",
           }}
         >
-          <Text>STesting</Text>
+          <TouchableOpacity
+            onPress={() => {
+              setoverlay3(true);
+            }}
+          >
+            <View
+              style={{
+                borderRadius: 10,
+                border: "1px solid #ccc",
+                boxShadow: "0 0 10px #ccc",
+                backgroundColor: "#fff",
+                width: 160,
+                height: 150,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                source={require("../assets/warehouseicon.png")}
+                style={{ width: 90, height: 90 }}
+                // onPress = {()=>{setoverlay(true)}}
+              ></Image>
+              <Text
+                style={{
+                  fontFamily: "Raleway_400Regular",
+                  fontSize: 15,
+                  marginTop: "10%",
+                  textAlign: "center",
+                }}
+              >
+                Warehouse Management
+              </Text>
+              <Overlay
+                isVisible={overlay3}
+                onBackdropPress={() => setoverlay3(false)}
+                overlayStyle={{ width: "80%", height: "40%" }}
+              >
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Image
+                    source={require("../assets/warehouseicon.png")}
+                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    // onPress = {()=>{setoverlay(true)}}
+                  ></Image>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 20,
+                      marginTop: "10%",
+                    }}
+                  >
+                    Warehouse Management
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 14,
+                      padding: "5%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Retail Experts offers a comprehensive e-commerce website
+                    application and mobile application that is fully
+                    customizable and personalized based on the customer's needs
+                  </Text>
+                </View>
+              </Overlay>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              setoverlay4(true);
+            }}
+          >
+            <View
+              style={{
+                borderRadius: 10,
+                border: "1px solid #ccc",
+                boxShadow: "0 0 10px #ccc",
+                backgroundColor: "#fff",
+                width: 160,
+                height: 150,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                source={require("../assets/agencyicon.png")}
+                style={{ width: 90, height: 90 }}
+                // onPress = {()=>{setoverlay(true)}}
+              ></Image>
+              <Text
+                style={{
+                  fontFamily: "Raleway_400Regular",
+                  fontSize: 15,
+                  marginTop: "10%",
+                }}
+              >
+                Agency Management
+              </Text>
+              <Overlay
+                isVisible={overlay4}
+                onBackdropPress={() => setoverlay4(false)}
+                overlayStyle={{ width: "80%", height: "40%" }}
+              >
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Image
+                    source={require("../assets/agencyicon.png")}
+                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    // onPress = {()=>{setoverlay(true)}}
+                  ></Image>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 20,
+                      marginTop: "10%",
+                    }}
+                  >
+                    Agency Management
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 14,
+                      padding: "5%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Retail Experts offers a comprehensive e-commerce website
+                    application and mobile application that is fully
+                    customizable and personalized based on the customer's needs
+                  </Text>
+                </View>
+              </Overlay>
+            </View>
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-around",
+            marginTop: "5%",
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => {
+              setoverlay5(true);
+            }}
+          >
+            <View
+              style={{
+                borderRadius: 10,
+                border: "1px solid #ccc",
+                boxShadow: "0 0 10px #ccc",
+                backgroundColor: "#fff",
+                width: 160,
+                height: 150,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                source={require("../assets/enterpriseicon.png")}
+                style={{ width: 90, height: 90 }}
+                // onPress = {()=>{setoverlay(true)}}
+              ></Image>
+              <Text
+                style={{
+                  fontFamily: "Raleway_400Regular",
+                  fontSize: 15,
+                  marginTop: "10%",
+                }}
+              >
+                Enterprise Housing
+              </Text>
+              <Overlay
+                isVisible={overlay5}
+                onBackdropPress={() => setoverlay5(false)}
+                overlayStyle={{ width: "80%", height: "40%" }}
+              >
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Image
+                    source={require("../assets/enterpriseicon.png")}
+                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    // onPress = {()=>{setoverlay(true)}}
+                  ></Image>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 20,
+                      marginTop: "10%",
+                    }}
+                  >
+                    Enterprise Housing
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 14,
+                      padding: "5%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Retail Experts offers a comprehensive e-commerce website
+                    application and mobile application that is fully
+                    customizable and personalized based on the customer's needs
+                  </Text>
+                </View>
+              </Overlay>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              setoverlay6(true);
+            }}
+          >
+            <View
+              style={{
+                borderRadius: 10,
+                border: "1px solid #ccc",
+                boxShadow: "0 0 10px #ccc",
+                backgroundColor: "#fff",
+                width: 160,
+                height: 150,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Image
+                source={require("../assets/textileicon.png")}
+                style={{ width: 90, height: 90 }}
+                // onPress = {()=>{setoverlay(true)}}
+              ></Image>
+              <Text
+                style={{
+                  fontFamily: "Raleway_400Regular",
+                  fontSize: 15,
+                  marginTop: "10%",
+                }}
+              >
+                Textile Management
+              </Text>
+              <Overlay
+                isVisible={overlay6}
+                onBackdropPress={() => setoverlay6(false)}
+                overlayStyle={{ width: "80%", height: "40%" }}
+              >
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Image
+                    source={require("../assets/textileicon.png")}
+                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    // onPress = {()=>{setoverlay(true)}}
+                  ></Image>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 20,
+                      marginTop: "10%",
+                    }}
+                  >
+                    Textile Management
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 14,
+                      padding: "5%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Retail Experts offers a comprehensive e-commerce website
+                    application and mobile application that is fully
+                    customizable and personalized based on the customer's needs
+                  </Text>
+                </View>
+              </Overlay>
+            </View>
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-around",
+            marginTop: "5%",
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => {
+              setoverlay7(true);
+            }}
+          >
+            <View
+              style={{
+                borderRadius: 10,
+                border: "1px solid #ccc",
+                boxShadow: "0 0 10px #ccc",
+                backgroundColor: "#fff",
+                width: 160,
+                height: 150,
+                justifyContent: "center",
+                alignItems: "center",
+                marginBottom:"15%"
+              }}
+            >
+              <Image
+                source={require("../assets/jewelryicon.png")}
+                style={{ width: 90, height: 90 }}
+                // onPress = {()=>{setoverlay(true)}}
+              ></Image>
+              <Text
+                style={{
+                  fontFamily: "Raleway_400Regular",
+                  fontSize: 15,
+                  marginTop: "10%",
+                  textAlign:"center"
+                }}
+              >
+                Jewellery Management
+              </Text>
+              <Overlay
+                isVisible={overlay7}
+                onBackdropPress={() => setoverlay7(false)}
+                overlayStyle={{ width: "80%", height: "40%" }}
+              >
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Image
+                    source={require("../assets/jewelryicon.png")}
+                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    // onPress = {()=>{setoverlay(true)}}
+                  ></Image>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 20,
+                      marginTop: "10%",
+                    }}
+                  >
+                   Jewellery Management
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: "Raleway_400Regular",
+                      fontSize: 14,
+                      padding: "5%",
+                      textAlign: "center",
+                    }}
+                  >
+                    Retail Experts offers a comprehensive e-commerce website
+                    application and mobile application that is fully
+                    customizable and personalized based on the customer's needs
+                  </Text>
+                </View>
+              </Overlay>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
 
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <Header
           backgroundColor="transparent"
           centerComponent={
@@ -203,7 +642,9 @@ export default function Product({ navigation }) {
           ></Button>
         </View>
 
-        <View>{btn === true ? SoftwarePage : HardwarePage}</View>
+        <ScrollView scrollEnabled={true}>
+          {btn === true ? SoftwarePage : HardwarePage}
+        </ScrollView>
       </View>
     );
   }
