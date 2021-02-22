@@ -33,7 +33,7 @@ export default function About({ navigation }) {
           }
         />
         <Text style={styles.headerStyle}>About Us</Text>
-        <View style={{backgroundColor:"white", borderWidth:2, margin:"5%",marginTop:"12%"}}>
+        <View style={{backgroundColor:"white", borderWidth:2, margin:"5%",marginTop:"12%", padding:"3%"}}>
         <Text
           style={{
             fontFamily: "Raleway_400Regular",

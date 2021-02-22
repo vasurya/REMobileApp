@@ -5,7 +5,7 @@ import {
   Text,
   View,
   TouchableOpacity,
-  TouchableHighlight,
+  
   ScrollView,
 } from "react-native";
 // import {Button} from 'native-base'
@@ -36,8 +36,9 @@ export default function Product({ navigation }) {
     let styles = {
       headerStyle: {
         fontFamily: "Montserrat_900Black",
-        fontSize: 30,
-        marginLeft: 10,
+        fontSize: 34,
+        marginLeft: 20,
+        marginTop: 15,
       },
     };
 
