@@ -79,7 +79,7 @@ export default function Contact({ navigation }) {
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 10,
+                  fontSize: 18,
                   color: "black",
                   textDecorationLine: "underline",
                 }}
@@ -98,7 +98,7 @@ export default function Contact({ navigation }) {
               marginTop: "10%",
             }}
           >
-            <Text style={{ fontFamily: "Montserrat_900Black", fontSize: 15 }}>
+            <Text style={{ fontFamily: "Montserrat_900Black", fontSize: 15, }}>
               Managing Director
             </Text>
             <Text style={{ fontFamily: "Raleway_400Regular" }}>
