@@ -12,6 +12,8 @@ import { Header, Icon, Image, Button, Overlay } from "react-native-elements";
 import AppLoading from "expo-app-loading";
 import { useFonts, Raleway_400Regular } from "@expo-google-fonts/raleway";
 import { Montserrat_900Black } from "@expo-google-fonts/montserrat";
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
+
 
 export default function Product({ navigation }) {
   const [btn, setbtn] = useState(true);
@@ -34,9 +36,9 @@ export default function Product({ navigation }) {
     let styles = {
       headerStyle: {
         fontFamily: "Montserrat_900Black",
-        fontSize: 34,
-        marginLeft: 20,
-        marginTop: 15,
+        fontSize: scale(34),
+        marginLeft: scale(20),
+        marginTop: scale(15),
       },
     };
 
@@ -54,8 +56,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
 
                 justifyContent: "center",
                 alignItems: "center",
@@ -70,14 +72,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/pole.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Pole Display
@@ -86,30 +88,30 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay1}
                 onBackdropPress={() => setoverlay1(false)}
-                overlayStyle={{ width: "80%", height: "40%" }}
+                overlayStyle={{ width: scale(300), height: scale(400) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center",height:"100%" }}
                 >
                   <Image
                     source={require("../assets/pole.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Pole Display
                   </Text>
                   {/* <View style={{flex:1}}> */}
                   <ScrollView
-                  scrollEnabled={true}
+                  
                     contentContainerStyle={{
-                      paddingTop:"5%"
+                      padding: scale(15),
                     }}
                   >
                     {/* <View
@@ -119,36 +121,36 @@ export default function Product({ navigation }) {
                     > */}
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Bright vacuum fluorescent display
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Two-line display with 20 characters per line{" "}
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Long life and trouble free operation
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Generous base best for freely stand alone application in
@@ -156,27 +158,27 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Two adjustable viewing angles{" "}
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Pole height adjustable{" "}
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Display frame is horizontally slidable and 360 degree
@@ -184,9 +186,9 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Brightness adjustable by software
@@ -209,8 +211,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -224,14 +226,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/cashdraw.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width:scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Cash Drawer
@@ -239,55 +241,55 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay2}
                 onBackdropPress={() => setoverlay2(false)}
-                overlayStyle={{ width: "80%", height: "40%" }}
+                overlayStyle={{ width: scale(300), height: scale(400) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center", height:"100%" }}
                 >
                   <Image
                     source={require("../assets/cashdraw.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Cash Drawer
                   </Text>
                   <ScrollView
-                  scrollEnabled={true}
+                 
                     contentContainerStyle={{
-                      paddingTop:"5%"
+                      padding: scale(15),
                     }}
                     
                   >
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       "Screw less" innovative design
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Adjustable bill/coin compartments
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Advanced mechanical design to extend the MTBF to 1,000,00
@@ -295,18 +297,18 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Precision machining assures wobble-free drawer movement
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Check slot for non-cash or high denomination currency
@@ -314,9 +316,9 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Three level lock for maximum cash security
@@ -345,8 +347,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -360,14 +362,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/thermal.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                   textAlign: "center",
                 }}
               >
@@ -376,62 +378,62 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay3}
                 onBackdropPress={() => setoverlay3(false)}
-                overlayStyle={{ width: "80%", height: "40%" }}
+                overlayStyle={{ width: scale(250), height: scale(280) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/thermal.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Thermal Bill Rolls
                   </Text>
                   <View
                     style={{
-                      padding: "5%",
+                      padding: scale(15),
                     }}
                   >
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       25*20 size
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       28*20 size
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       50*20 size
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       and more
@@ -452,8 +454,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -467,14 +469,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/barcodeprinter.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                   textAlign: "center",
                 }}
               >
@@ -483,21 +485,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay4}
                 onBackdropPress={() => setoverlay4(false)}
-                overlayStyle={{ width: "80%", height: "40%" }}
+                overlayStyle={{ width: scale(300), height: scale(300)}}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center",height:"100%" }}
                 >
                   <Image
                     source={require("../assets/barcodeprinter.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     TA-210 Barcode Printer
@@ -505,15 +507,15 @@ export default function Product({ navigation }) {
                   <ScrollView
                   scrollEnabled={true}
                     contentContainerStyle={{
-                      paddingTop:"5%"
+                      padding: scale(15),
                     }}
                   >
                   
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       200 MHz 32-bit RISC processor with 8 MB SDRAM, 4MB FLASH
@@ -521,18 +523,18 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Internally Scalable True Type fonts
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       TSPL-EZ TM firmware emulates TPLE and TPLZ languages out
@@ -540,18 +542,18 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Precision machining assures wobble-free drawer movement
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       5" OD internal media supply, optional external media
@@ -567,7 +569,7 @@ export default function Product({ navigation }) {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
-            marginTop: "5%",
+            marginTop: scale(15),
           }}
         >
           <TouchableOpacity
@@ -581,8 +583,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -596,14 +598,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/topscanner.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Table Top Scanner
@@ -611,21 +613,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay5}
                 onBackdropPress={() => setoverlay5(false)}
-                overlayStyle={{ width: "80%", height: "50%" }}
+                overlayStyle={{ width: scale(300), height: scale(300) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center",height:"100%" }}
                 >
                   <Image
                     source={require("../assets/topscanner.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Table Top Scanner
@@ -633,23 +635,24 @@ export default function Product({ navigation }) {
                   <ScrollView
                   scrollEnabled={true}
                     contentContainerStyle={{
-                      paddingTop:"5%"
+                      padding: scale(15),
+
                     }}
                   >
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Fully automatic scan operation
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       PowerLink,user-replaceable cables and MetroSet and
@@ -659,9 +662,9 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Single Line option: With the push of a button, switch to a
@@ -669,9 +672,9 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Adjustable scan head: Ability to tilt scanner 30 degrees
@@ -679,9 +682,9 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       EAS: Deaxtivate an EAS tag and decode a barcode in a
@@ -689,18 +692,18 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       7 Beeper tones
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Customize the depth-of field for tight for scanning
@@ -722,8 +725,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -737,14 +740,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/handscanner.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Hand Scanner
@@ -752,54 +755,55 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay6}
                 onBackdropPress={() => setoverlay6(false)}
-                overlayStyle={{ width: "80%", height: "40%" }}
+                overlayStyle={{ width: scale(300), height: scale(300) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center", height:"100%" }}
                 >
                   <Image
                     source={require("../assets/handscanner.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15)  }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Hand Scanner
                   </Text>
                   <ScrollView
-                  scrollEnabled={true}
+                 
                     contentContainerStyle={{
-                      paddingTop:"5%"
+                      padding: scale(15),
+
                     }}
                   >
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Light Source : visible Laser Diode 650 nm+- 5 nm
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Laser power {"<"} 1 mW Peak Power
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Depth of scan field :0mm-140mm(0-5.5) for 0.330 mm(13 mil
@@ -807,9 +811,9 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Width of scan Field :49 mm (1.9)@ face; 195 mm(7.7) @ 140
@@ -817,27 +821,27 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Scan speed :72 scan lines per second
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Scan pattern: Single scan line
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Minimum bar width 0.102 mm (4.0 mil)
@@ -852,7 +856,7 @@ export default function Product({ navigation }) {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
-            marginTop: "5%",
+            marginTop: scale(15),
           }}
         >
           <TouchableOpacity
@@ -866,8 +870,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
                 marginBottom: "15%",
@@ -882,14 +886,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/printer.png")}
-                style={{ width: 90, height: 90 }}
+                style={{  width: scale(90), height: scale(90)}}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                   textAlign: "center",
                 }}
               >
@@ -898,21 +902,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay7}
                 onBackdropPress={() => setoverlay7(false)}
-                overlayStyle={{ width: "80%", height: "50%" }}
+                overlayStyle={{ width: scale(300), height: scale(350) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/printer.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Epson TM-T82 (Ethernet POS Printer)
@@ -924,45 +928,45 @@ export default function Product({ navigation }) {
                   >
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       29 Centimeters Height
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       40 Centimeters Width
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Weight 1.7 Kg
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Dimensions 49 x 40 x 29 cm
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Printer, Adopter, Power cable, Interface cable, CD and
@@ -984,11 +988,11 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
-                marginBottom: "15%",
+                marginBottom: scale(25),
               }}
             >
               <View style={{ position: "absolute", right: 10, top: 2 }}>
@@ -1000,14 +1004,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/cpu.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90)}}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                   textAlign: "center",
                 }}
               >
@@ -1016,35 +1020,35 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay8}
                 onBackdropPress={() => setoverlay8(false)}
-                overlayStyle={{ width: "80%", height: "50%" }}
+                overlayStyle={{ width: scale(300), height: scale(360) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/cpu.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Brix CPU
                   </Text>
                   <View
                     style={{
-                      padding: "5%",
+                      padding: scale(15),
                     }}
                   >
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Dimensions:46.8 mm x 112.6 mm x 119.4 mm (1.84" x 4.43" x
@@ -1052,36 +1056,36 @@ export default function Product({ navigation }) {
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Mother board:105 x 110 mm
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       CPU: Intel Core i5-6200U, 2.3GHz / 2.8GHz
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       Memory: 2 x SO-DIMM DDR4 slots, 2133MHz, Max 32GB
                     </Text>
                     <Text
                       style={{
-                        marginBottom: "2%",
+                        marginBottom: scale(10),
                         fontFamily: "Raleway_400Regular",
-                        fontSize: 14,
+                        fontSize: scale(14),
                       }}
                     >
                       LAN:Gigabit LAN (Intel i219V)
@@ -1110,8 +1114,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -1125,14 +1129,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/storeicon3.png")}
-                style={{ width: 140, height: 90 }}
+                style={{ width: scale(130), height: scale(80) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Store Management
@@ -1140,21 +1144,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay2}
                 onBackdropPress={() => setoverlay2(false)}
-                overlayStyle={{ width: "80%", height: "65%" }}
+                overlayStyle={{ width: scale(300), height: scale(450) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/storeicon3.png")}
-                    style={{ width: 140, height: 100, marginTop: "5%" }}
+                    style={{ width: scale(140), height: scale(100), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Store Management
@@ -1162,8 +1166,8 @@ export default function Product({ navigation }) {
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 14,
-                      padding: "5%",
+                      fontSize: scale(13),
+                      padding: scale(15),
                       textAlign: "center",
                     }}
                   >
@@ -1192,8 +1196,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -1207,14 +1211,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/laptopicon.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(80), height: scale(80) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Web Development
@@ -1223,21 +1227,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay1}
                 onBackdropPress={() => setoverlay1(false)}
-                overlayStyle={{ width: "80%", height: "40%" }}
+                overlayStyle={{ width: scale(300), height: scale(250) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/laptopicon.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(80), height: scale(70), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Web Development
@@ -1245,8 +1249,8 @@ export default function Product({ navigation }) {
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 14,
-                      padding: "5%",
+                      fontSize: scale(13),
+                      padding: scale(15),
                       textAlign: "center",
                     }}
                   >
@@ -1263,7 +1267,7 @@ export default function Product({ navigation }) {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
-            marginTop: "5%",
+            marginTop: scale(15),
           }}
         >
           <TouchableOpacity
@@ -1277,8 +1281,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -1292,14 +1296,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/warehouseicon.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(80) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                   textAlign: "center",
                 }}
               >
@@ -1308,21 +1312,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay3}
                 onBackdropPress={() => setoverlay3(false)}
-                overlayStyle={{ width: "80%", height: "65%" }}
+                overlayStyle={{ width: scale(300), height: scale(450) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/warehouseicon.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(100), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Warehouse Management
@@ -1330,8 +1334,8 @@ export default function Product({ navigation }) {
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 14,
-                      padding: "3%",
+                      fontSize: scale(13),
+                      padding: scale(15),
                       textAlign: "center",
                     }}
                   >
@@ -1361,8 +1365,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -1376,14 +1380,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/agencyicon.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Agency Management
@@ -1391,21 +1395,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay4}
                 onBackdropPress={() => setoverlay4(false)}
-                overlayStyle={{ width: "80%", height: "60%" }}
+                overlayStyle={{ width: scale(300), height: scale(400) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/agencyicon.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Agency Management
@@ -1413,8 +1417,8 @@ export default function Product({ navigation }) {
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 14,
-                      padding: "5%",
+                      fontSize: scale(13),
+                      padding: scale(15),
                       textAlign: "center",
                     }}
                   >
@@ -1436,7 +1440,7 @@ export default function Product({ navigation }) {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
-            marginTop: "5%",
+            marginTop: scale(15),
           }}
         >
           <TouchableOpacity
@@ -1450,8 +1454,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -1465,14 +1469,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/enterpriseicon.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Enterprise Housing
@@ -1480,21 +1484,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay5}
                 onBackdropPress={() => setoverlay5(false)}
-                overlayStyle={{ width: "80%", height: "58%" }}
+                overlayStyle={{ width: scale(300), height: scale(400) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/enterpriseicon.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90),marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Enterprise Housing
@@ -1502,8 +1506,8 @@ export default function Product({ navigation }) {
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 14,
-                      padding: "5%",
+                      fontSize: scale(13),
+                      padding: scale(15),
                       textAlign: "center",
                     }}
                   >
@@ -1530,8 +1534,8 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
               }}
@@ -1545,14 +1549,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/textileicon.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90)  }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                 }}
               >
                 Textile Management
@@ -1560,21 +1564,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay6}
                 onBackdropPress={() => setoverlay6(false)}
-                overlayStyle={{ width: "80%", height: "60%" }}
+                overlayStyle={{ width: scale(300), height: scale(420) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/textileicon.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Textile Management
@@ -1582,8 +1586,8 @@ export default function Product({ navigation }) {
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 14,
-                      padding: "5%",
+                      fontSize: scale(13),
+                      padding: scale(15),
                       textAlign: "center",
                     }}
                   >
@@ -1605,7 +1609,7 @@ export default function Product({ navigation }) {
           style={{
             flexDirection: "row",
             justifyContent: "space-around",
-            marginTop: "5%",
+            marginTop: scale(15),
           }}
         >
           <TouchableOpacity
@@ -1619,11 +1623,11 @@ export default function Product({ navigation }) {
                 border: "1px solid #ccc",
                 boxShadow: "0 0 10px #ccc",
                 backgroundColor: "#fff",
-                width: 160,
-                height: 150,
+                width: scale(160),
+                height: scale(150),
                 justifyContent: "center",
                 alignItems: "center",
-                marginBottom: "15%",
+                marginBottom: scale(25),
               }}
             >
               <View style={{ position: "absolute", right: 10, top: 2 }}>
@@ -1635,14 +1639,14 @@ export default function Product({ navigation }) {
               </View>
               <Image
                 source={require("../assets/jewelryicon.png")}
-                style={{ width: 90, height: 90 }}
+                style={{ width: scale(90), height: scale(90) }}
                 // onPress = {()=>{setoverlay(true)}}
               ></Image>
               <Text
                 style={{
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 15,
-                  marginTop: "10%",
+                  fontSize: scale(15),
+                  marginTop: scale(15),
                   textAlign: "center",
                 }}
               >
@@ -1651,21 +1655,21 @@ export default function Product({ navigation }) {
               <Overlay
                 isVisible={overlay7}
                 onBackdropPress={() => setoverlay7(false)}
-                overlayStyle={{ width: "80%", height: "55%" }}
+                overlayStyle={{width: scale(300), height: scale(370) }}
               >
                 <View
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
                   <Image
                     source={require("../assets/jewelryicon.png")}
-                    style={{ width: 90, height: 90, marginTop: "5%" }}
+                    style={{ width: scale(90), height: scale(90), marginTop: scale(15) }}
                     // onPress = {()=>{setoverlay(true)}}
                   ></Image>
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 20,
-                      marginTop: "10%",
+                      fontSize: scale(19),
+                      marginTop: scale(20),
                     }}
                   >
                     Jewellery Management
@@ -1673,8 +1677,8 @@ export default function Product({ navigation }) {
                   <Text
                     style={{
                       fontFamily: "Raleway_400Regular",
-                      fontSize: 14,
-                      padding: "5%",
+                      fontSize: scale(13),
+                      padding: scale(15),
                       textAlign: "center",
                     }}
                   >
@@ -1701,7 +1705,7 @@ export default function Product({ navigation }) {
           centerComponent={
             <Image
               source={require("./logonew.png")}
-              style={{ width: 250, height: 50 }}
+              style={{ width: scale(250), height: scale(50) }}
             />
           }
         />
@@ -1711,8 +1715,8 @@ export default function Product({ navigation }) {
             style={{
               fontFamily: "Raleway_400Regular",
               fontWeight: "600",
-              fontSize: 17,
-              padding: 15,
+              fontSize: scale(15),
+              padding: scale(15),
             }}
           >
             Retail Experts offers a comprehensive collection of software and
@@ -1735,22 +1739,22 @@ export default function Product({ navigation }) {
           >
             <View
               style={{
-                width: 120,
-                height: 50,
+                width: scale(100),
+                height: scale(45),
                 borderRadius: 0,
                 // backgroundColor: "#2196F3",
                 // border:'1px solid',
                 alignItems: "center",
-                marginRight: "6%",
+                marginRight: scale(16),
                 borderWidth: btn === true ? 0 : 1,
                 backgroundColor: btn === true ? "#2196F3" : "transparent",
               }}
             >
               <Text
                 style={{
-                  paddingTop: "10%",
+                  paddingTop: scale(10),
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 20,
+                  fontSize: scale(17),
                   // color: 'white'
                   // color:'black',
                   color: btn === true ? "white" : "black",
@@ -1763,8 +1767,8 @@ export default function Product({ navigation }) {
           <TouchableOpacity onPress={() => setbtn(false)} underlayColor="white">
             <View
               style={{
-                width: 120,
-                height: 50,
+                width: scale(100),
+                height: scale(45),
                 borderRadius: 0,
                 // backgroundColor: "#2196F3",
                 alignItems: "center",
@@ -1775,9 +1779,9 @@ export default function Product({ navigation }) {
             >
               <Text
                 style={{
-                  paddingTop: "10%",
+                  paddingTop: scale(10),
                   fontFamily: "Raleway_400Regular",
-                  fontSize: 20,
+                  fontSize: scale(17),
                   color: btn === false ? "white" : "black",
                 }}
               >
